@@ -1,0 +1,9 @@
+version: "3.7"
+services: 
+  prometheuss:
+    image: prom/prometheus
+    ports: 
+        - "9090:9090"
+    restart: always
+    volumes:
+      - ./configs/prometheus/:/etc/prometheus/:z
