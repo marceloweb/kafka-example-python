@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(0, './producer')
+from main.py import producer
+
 
 def main():
   print("Select an option:")
