@@ -12,7 +12,8 @@ def main():
   print("| 3 - Exit         |")
   print("--------------------")
 
-  option = input("Input a value: ")
+  print("Input a value: ")
+  option = int(input())
 
   if (option == 3):
      return
