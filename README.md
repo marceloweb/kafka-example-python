@@ -10,6 +10,8 @@
 
 ### Kafka Producer
 
+A producer is the one which publishes or writes data to the topics within different partitions.
+
 ### Kafka Consumer
 
 #### marceloweb.info
