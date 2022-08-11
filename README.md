@@ -14,4 +14,6 @@ A producer is the one which publishes or writes data to the topics within differ
 
 ### Kafka Consumer
 
+Kafka consumers are typically part of a consumer group . When multiple consumers are subscribed to a topic and belong to the same consumer group, each consumer in the group will receive messages from a different subset of the partitions in the topic.
+
 #### marceloweb.info
