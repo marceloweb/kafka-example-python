@@ -18,6 +18,9 @@ Kafka consumers are typically part of a consumer group . When multiple consumers
 
 ### Requirements
 
+* Kafka
+* Zookeeper
+
 #### Maintenance
 
 * [Blog: marceloweb.info](https://marceloweb.info)
