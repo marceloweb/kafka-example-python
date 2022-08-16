@@ -5,3 +5,5 @@ services:
     ports: 
         - "9092:9092"
     restart: always
+    volumes:
+    - ./kafka-data:/bitnami/kafka
