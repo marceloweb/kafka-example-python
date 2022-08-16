@@ -1,9 +1,7 @@
 version: "3.7"
 services: 
-  prometheuss:
-    image: prom/prometheus
+  kafka:
+    image: bitname/kafka
     ports: 
-        - "9090:9090"
+        - "9092:9092"
     restart: always
-    volumes:
-      - ./configs/prometheus/:/etc/prometheus/:z
