@@ -5,7 +5,7 @@ services:
     ports:
       - "2181:2181"
     volumes:
-      - "zookeeper_data:/bitnami"
+      - "zookeeper_data:/bitnami:rw"
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
   kafka:
@@ -13,13 +13,14 @@ services:
     ports:
       - "9092:9092"
     volumes:
-      - "kafka_data:/bitnami"
+      - "kafka_data:/bitnami:rw"
     environment:
-      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
-      - ALLOW_PLAINTEXT_LISTENER=yes
       - KAFKA_BROKER_ID=1
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
       - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_CFG_LOG_DIRS=/tmp/kafka-logs-2
     depends_on:
       - zookeeper
 
