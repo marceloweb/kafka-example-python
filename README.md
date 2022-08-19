@@ -21,6 +21,14 @@ Kafka consumers are typically part of a consumer group . When multiple consumers
 * Kafka
 * Zookeeper
 
+### Run
+
+```console
+$ cd kafka/
+$ bin/kafka-console-producer.sh --broker-list 172.18.0.3:9092 --topic test-docker
+$ bin/kafka-console-consumer.sh --bootstrap-server 172.18.0.3:9092 --topic test-docker --from-beginning
+```
+
 #### Maintenance
 
 * [Blog: marceloweb.info](https://marceloweb.info)
