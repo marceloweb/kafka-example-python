@@ -9,9 +9,9 @@ def producer():
    message = "TEST::::::: >> {} <<".format(number)
    bmessage = {'message' :message}
 
-   producer = KafkaProducer(bootstrap_servers='localhost:9092', 
+   producer = KafkaProducer(bootstrap_servers=conf['producer']['host'], 
                            value_serializer=lambda x: 
                             dumps(x).encode('utf-8'))
-   producer.send('NOVA_VENDA', value=bmessage)
+   producer.send(conf['producer']['topic'], value=bmessage)
    producer.flush()
 
