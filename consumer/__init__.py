@@ -1,6 +1,19 @@
 from kafka import KafkaConsumer
 import configs
 
+def configuration():
+   file = configs.load('configs/kafka/kafka.yml')
+   conf = {
+         'bootstrap.servers': file['consumer']['host'],
+         'group.id': "%s-consumer" % file['consumer']['group_id'],
+         'session.timeout.ms': 6000,
+         'default.topic.configs': {'auto.offset.reset': 'smallest'},
+         'security.protocol': 'SASL_SSL',
+         'sasl.mechanisms': 'SCRAM-SHA-256',
+         'sasl.username': file['consumer']['username'],
+         'sasl.password': file['consumer']['password'] 
+   }
+
 def consumer():
    conf = configs.load('configs/kafka/kafka.yml')
    message = 'test'

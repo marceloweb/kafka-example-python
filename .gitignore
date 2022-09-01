@@ -1,3 +1,4 @@
 /__pycache__/
 /zookeeper_data/
 /kafka_data/
+/configs/kafka/kafka.yml
