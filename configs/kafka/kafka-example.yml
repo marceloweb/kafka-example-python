@@ -1,0 +1,9 @@
+[consumer]
+host = 'localhost:9092'
+topic = 'MY_TOPIC'
+group_id = 'GROUP_TEST'
+
+
+[producer]
+host = 'localhost:9092'
+topic = 'MY_TOPIC'
