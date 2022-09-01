@@ -1,8 +1,9 @@
 [consumer]
-host = 
-topic = 
+host = ''
+topic = ''
+group_id = ''
 
 
 [producer]
-host = 
-topic = 
+host = ''
+topic = ''
