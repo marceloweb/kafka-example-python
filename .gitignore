@@ -2,3 +2,5 @@
 /zookeeper_data/
 /kafka_data/
 /configs/kafka/kafka.yml
+/consumer/__pycache__/
+/producer/__pycache__/
