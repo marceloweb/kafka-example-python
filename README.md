@@ -29,6 +29,6 @@ $ bin/kafka-console-producer.sh --broker-list 172.18.0.3:9092 --topic test-docke
 $ bin/kafka-console-consumer.sh --bootstrap-server 172.18.0.3:9092 --topic test-docker --from-beginning
 ```
 
-#### Maintenance
+### Maintenance
 
 * [Blog: marceloweb.info](https://marceloweb.info)
